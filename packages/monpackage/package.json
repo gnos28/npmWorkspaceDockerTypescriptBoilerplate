@@ -1,0 +1,27 @@
+{
+  "name": "@gnos28/monpackage",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "express": "^4.18.1",
+    "latinize": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/latinize": "^0.2.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itdevdefta/placement.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itdevdefta/placement/issues"
+  },
+  "homepage": "https://github.com/itdevdefta/placement#readme",
+  "description": ""
+}

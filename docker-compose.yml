@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  back_1:
+    build:
+      context: ./
+      dockerfile: ./back_1/Dockerfile
+      target: dev
+    volumes:
+      - ./back_1:/src
+      - ./packages:/packages
+    command: npm run start:dev
+    ports:
+      - "5000:5000"
+    environment:
+      NODE_ENV: development
+      DEBUG: nodejs-docker-express:*
+    networks:
+      - dockerlan
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+
+  back_2:
+    build:
+      context: ./
+      dockerfile: ./back_2/Dockerfile
+      target: dev
+    volumes:
+      - ./back_2:/src
+      - ./packages:/packages
+    command: npm run start:dev
+    ports:
+      - "5100:5100"
+    environment:
+      NODE_ENV: development
+      DEBUG: nodejs-docker-express:*
+    networks:
+      - dockerlan
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+
+networks:
+  dockerlan:
+    driver: bridge
