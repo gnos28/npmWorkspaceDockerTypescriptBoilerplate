@@ -65,3 +65,11 @@ RUN rm -Rf node_modules
 ### create **index.ts** that will import / export everything
 
 code !
+
+# USEFUL LINKS
+
+https://docs.npmjs.com/cli/v8/using-npm/workspaces
+
+https://grafikart.fr/tutoriels/nodejs-resolution-node-modules-2099
+
+https://grafikart.fr/tutoriels/organisation-projet-javascript-2098
